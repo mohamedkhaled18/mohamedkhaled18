@@ -1,0 +1,1413 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+
+:root {
+   --main-color--: #19c8f8;
+   --transparent-color--: rgb(15 116 143 / 70%);
+   --sec-color--: #777;
+   --dark-bg--: rgb(0 0 0 /60%);
+   --padding--:  100px;
+   --line-color--: #b9b9b9;
+}
+
+/* start header */
+header {
+   padding: 15px 5px;
+   position: relative;
+   z-index: 11156;
+   height: 97px;
+}
+
+
+.logo {
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/logo.png");
+    width: 170px;
+    height: 50px;
+    background-repeat: no-repeat;
+    margin-left: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 97px;
+}
+.container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 30px);
+    left: 15px;
+    background-color: #e2e2e2;
+    z-index: -1;
+}
+.logo a {
+    font-style: italic;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    text-decoration: none;
+}
+.logo span {
+    color: rgb(16, 70, 218);
+}
+.material-symbols-outlined.bar {
+    color: white;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.material-symbols-outlined:hover {
+    color: var(--main-color--);
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+header nav ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+    padding: 40px 10px;
+    text-transform: capitalize;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+    color: var(--main-color--);
+    border-bottom: 1px var(--main-color--) solid;
+}
+header nav .form {
+    width: 40px;
+    height: 30px;
+    position: relative;
+    border-left: solid 1px white;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+header nav .form span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-10px);
+}
+@media (min-width:768px) {
+    .material-symbols-outlined.bar {
+        display: none;
+    }
+    .material-symbols-outlined.close {
+        display: none;
+    }
+}
+@media (max-width:768px) {
+   .container nav ul {
+        display: none;
+        background-color: #000000cc;
+        position: absolute;
+        top: 100%;
+        right: -15px;
+        width: 110%;
+    }
+    .container nav ul li {
+        padding-right: 20px;
+    }
+    .container nav ul li a:hover {
+        transform: scale(.9);
+    }
+    nav ul li a {
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 30px;
+    }
+
+    .material-symbols-outlined.bar {
+        display: flex;
+    }
+    .material-symbols-outlined.close {
+        position: absolute;
+        top: 125%;
+        right: 20px;
+        display: none;
+    }
+
+}
+
+.material-symbols-outlined.close {
+    cursor: pointer;
+}
+
+input {
+    display: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* end header */
+
+/* start landing */
+.landing {
+    min-height: 100vh;
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/landing.jpg");
+    background-size:cover;
+    color: rgb(59, 57, 57);
+    position: relative;
+    top: -112px;
+}
+
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+}
+.landing .overlay .text {
+    text-transform: capitalize;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    color: white;
+    background-color: var(--transparent-color--);
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+@media (max-width:767px) {
+   .landing .overlay .text {
+        width: 100%;
+    }
+    .landing .overlay .text .content {
+        max-width: 100%;
+    }
+}
+
+.landing .overlay .text .content {
+    max-width: 400px;
+}
+
+.landing .overlay .text h2 {
+    font-size: 32px;
+    font-weight: normal;
+    line-height: 1.5;
+}
+.landing .overlay .text p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.material-symbols-outlined.left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    color: white;
+    z-index: 151;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 2px;
+}
+.material-symbols-outlined.left:hover,
+.material-symbols-outlined.right:hover{
+    background-color:#ffffff42 ;
+}
+.material-symbols-outlined.right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    color: white;
+    border: white solid 1px;
+    border-radius: 20px;
+    z-index: 5;
+    padding: 2px;
+}
+
+.landing .bullets {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-50px);
+    left: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.landing .bullets span:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-color--);
+    border-radius: 20px;
+}
+.landing .bullets span {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border-radius: 20px;
+    border: white 1px solid;
+}
+
+/* end landing */
+
+/* start services */
+
+ .main-heading{
+    text-align: center;
+}
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+.main-heading h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 2px;
+    background: #333;
+    bottom: -30px;
+    width: 120px;
+}
+.main-heading h2::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: -41px;
+    width: 20px;
+    border: 2px solid black;
+    height: 20px;
+    background: white;
+    border-radius: 20px;
+}
+ 
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+}
+
+.services {
+    padding-top: var(--padding--);
+    padding-bottom: var(--padding--);
+}
+
+.services .srv-container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.services .srv-box {
+    margin-bottom: 30px;
+}
+.services .srv-box .text {
+    margin-left: 20px;
+}
+.services .srv-box h3 {
+    color: var(--main-color--);
+    margin-bottom: 30px;
+}
+.services .srv-box p {
+    color: var(--sec-color--);
+    line-height:2 ;
+}
+
+.services .srv-box i {
+    width: 48px;
+    height: 48px;
+    font-size: 40px;
+ 
+}
+
+@media (min-width:768px) {
+    .services .srv-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        grid-gap: 35px 80px;
+    }
+}
+@media (max-width:767px) {
+    .services .srv-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .services .srv-box .text {
+        margin-left: 0;
+    }
+    .services .srv-box i {
+        margin-left: 44%;
+        margin-bottom: 25px;
+    }
+}
+/* end services */
+
+/* start design */
+.design {
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/design-features.jpg");
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.design .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg--);
+}
+.image {
+    position: absolute;
+    bottom: -70px;
+    left: 100px;
+}
+.design .text {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: rgb(11 87 114);
+    transform: translateY(-50%);
+    padding: 50px;
+    width: 50%;
+    color: white;
+}
+.design .text h2 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+.design .text div {
+    display: flex;
+    margin-bottom: 20px;
+}
+.design .text p {
+    margin-left: 20px;
+    text-transform: capitalize;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+/* 
+    text is existed in the design are created by ul and li | icon is created by pseudo element
+    ul li:before {
+        font-family: "font awesome  free";
+        content:"/f5465";
+        font-weight:900;   ======> to appear
+    }      
+*/
+@media (max-width:767px) {
+    .design .image {
+        display: none;
+    }
+    .design .text {
+        width: 100%;
+    }
+}
+/* end design */
+
+/* start portofolio */
+.portofolio {
+    padding-top: var(--padding--);
+    width: 100%;
+}
+.portofolio .container-2 {
+    text-align: center;
+    position: relative;
+}
+.portofolio .container-2 ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+.portofolio .container-2 ul li {
+    text-transform: capitalize;
+    font-weight: normal;
+    padding-right: 10px;
+}
+.portofolio .container-2 ul li:first-child{
+    color: white;
+    background-color: var(--main-color--);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.container-img {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+.container-img  img {
+    max-width: 100%;
+    transition: .3s;
+}
+
+.container-img .box{
+    position: relative;
+    flex-basis: 25%;
+    overflow: hidden;
+}
+@media (min-width:768px) {
+    .container-img .box {
+        flex-basis:50%;
+    }
+}
+@media (min-width:1199px) {
+    .container-img .box {
+        flex-basis:25%;
+    }
+}
+@media (max-width:767px) {
+    .container-img  {
+        flex-direction: column;
+    }
+    /* the 2 codes are correct */
+    .container-img .box {
+        flex-basis: 100%;
+    }
+}
+.container-img .box .caption p {
+    color: var(--main-color--);
+}
+.container-img .box .caption p
+,h4 {
+    font-weight: normal;
+}
+.container-img .box .caption h4 {
+    margin-bottom: 10px;
+}
+.container-img .box .caption {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    transition: .3s;
+    padding: 10px;
+}
+.container-img .box:hover .caption{
+    bottom: 0;
+}
+.container-img .box:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+.portofolio .more {
+    background-color: var(--main-color--);
+    color: white;
+    text-decoration: none;
+    margin: 30px auto;
+    padding: 20px 30px;
+    display: block;
+    width: fit-content;
+}
+/* end portofolio */
+
+/* start video */
+.video {
+    position: relative;
+    margin-top: 100px;
+}
+video {
+    max-width: 100%;
+}
+.video .overlay {
+    background-color: rgb(0 0 0 / 40%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.video .text {
+    background-color: var(--transparent-color--);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    padding: 50px;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.video .text h2 {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.video .text p {
+    font-weight: normal;
+    font-size: 20px;
+    margin-bottom: 55px;
+}
+.video .text a {
+    text-decoration:none;
+    background-color: black;
+    padding: 20px 30px;
+    color: white;
+}
+@media (max-width:480px) {
+    .video .text {
+        padding: 20px;
+    }
+    .video .text h2{
+        font-size: 12px;
+    }
+    .video .text p{
+        font-size: 11px;
+        margin-bottom: 30px;
+    }
+    .video .text a{
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+}
+/* end video */
+
+/* start about */
+.about {
+    padding-top: var(--padding--);
+    overflow: hidden;
+    text-align: center;
+  }
+  .about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+  }
+  @media (max-width: 767px) {
+    .about img {
+      bottom: -60px;
+      margin-top: -60px;
+    }
+  }
+/* end about */
+
+/* Start stats */
+.stats {
+    padding-top: var(--padding--);
+    padding-bottom: var(--padding--);
+    text-align: center;
+    background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/stats.png");
+    background-size: cover;
+    position: relative;
+}
+.stats::before {
+    content: "";
+    background-color: rgb(0 0 0 / 70%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.stats .container {
+    position: relative;
+    background-color: var(--transparent-color--);
+    padding: 50px;
+    flex-wrap: wrap;
+}
+.stats .container .box {
+    color: white;
+    text-transform: capitalize;
+    flex-basis: 25%;
+    padding: 50px;
+}
+
+@media (max-width:767px) {
+    .stats .container .box {
+        flex-basis: 100%;
+    }
+}
+@media (min-width:768px) and (max-width:1000px) {
+    .stats .container .box {
+        flex-basis: 50%;
+    }
+}
+@media (min-width:1001px) {
+    .stats .container .box {
+        flex-basis: 25%;
+    }
+}
+
+.stats .container .box i {
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.stats .container .box p {
+    letter-spacing: 2px;
+}
+.stats .container .box .number {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* End stats */
+/* Start skills */
+
+.our-skills {
+    padding-top: var(--padding--);
+    padding-bottom: var(--padding--);
+}
+.our-skills .container > div > h3 {
+    margin: 0 0 30px ;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+.our-skills .container {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.our-skills .container::after{
+    content: "";
+    display: none;
+}
+.our-skills .container > div > p {
+    color: #777;
+    line-height: 2;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+@media (min-width:992px) {
+    .our-skills .container > div {
+        flex-basis: 45%;
+    } 
+}
+
+.our-skills .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.our-skills .content img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+@media (max-width:767px) {
+    .our-skills .content img {
+        margin: 30px auto;
+    }
+    .our-skills .content {
+        flex-direction: column;
+    }
+  
+}
+.our-skills .content .text {
+    border-bottom: 1px solid var(--line-color--);
+    padding-bottom: 10px;
+}
+.our-skills .content .text p {
+    text-align: right;
+    margin-top: 15px;
+    color: #777;
+    
+}
+.our-skills .content .text  {
+    line-height: 2;
+    text-align: center;
+} 
+.our-skills .container .bullets {
+    width: 100px;
+    height: 50px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.our-skills .container .bullets span {
+    width: 15px;
+    height: 15px;
+    border: solid var(--main-color--) 1px;
+    border-radius: 50%;
+}
+.our-skills .container .bullets span:nth-child(2){
+    background-color: var(--main-color--);
+}
+
+.our-skills .skills .prog-holder{
+    margin-bottom: 40px;
+}
+.our-skills .skills .prog-holder h4{
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+.our-skills .skills .prog-holder .prog{
+    background-color: #dedadc;
+    height: 30px;
+}
+.our-skills .skills .prog-holder .prog span {
+    position: relative;
+    display: block;
+    height: 100%;
+    background-color: var(--main-color--);
+}
+.our-skills .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    color: white;
+    background: black;
+    padding: 5px;
+    border-radius: 5px;
+    right: -22px;
+    top: -40px;
+}
+.our-skills .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    right: -9px;
+    top: -12px;
+    border-style: solid;
+    border-width: 8px;
+    border-color: black transparent transparent transparent;
+}
+@media (min-width:787px) and (max-width:991px) {
+    .skills {
+        width: 100%;
+    }
+    .testi {
+        width: 100%;
+    }
+}
+@media (max-width:991px) {
+    .skills {
+        margin-top: 50px;
+    }
+}
+
+/* End skills  */
+/* start qoute */
+
+.qoute {
+    padding-top: var(--padding--);
+    padding-bottom: var(--padding--);
+    text-align: center;
+    position: relative;
+    background-image: url("	https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/quote.jpg");
+    background-size: cover;
+    color: white;
+}
+.qoute .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: var(--dark-bg--);
+}
+.qoute .text {
+    position: relative;
+    z-index: 1515;
+}
+.qoute .text q {
+    font-size: 35px;
+    line-height: 1.55;
+}
+.qoute .text h4 {
+    margin-top: 50px;
+    font-size: 17px;
+}
+
+/* end qoute */
+
+/* start pricing */
+.pricing {
+    padding: var(--padding--) 20px;
+    text-align: center;
+}
+.pricing .container {
+    flex-wrap: wrap;
+}
+.pricing .container:after {
+    display: none;
+}
+
+.pricing .container .basic, .prem , .pro , .plat {
+    flex-basis:25% ;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+/* start basic */
+.basic {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--main-color--);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.basic .head  {
+    border-bottom: solid 1px var(--main-color--);
+    padding: 20px 120px;
+}
+.basic .head h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.basic .head span {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+}
+.basic .head span::before {
+    content: "$";
+    position: absolute;
+    left: -36px;
+    top: 0;
+    font-size: 35px;
+}
+.basic .head span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 30px;
+    bottom: 10px;
+    right: -65px;
+}
+.basic .compon  {
+    padding: 0px 50px;
+    border-bottom: solid 1px var(--main-color--);
+}
+.basic .compon span:last-child {
+    border: 0 !important ;
+}
+.basic .compon span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border-bottom: solid 1px var(--main-color--);
+    padding: 13px 7px;
+}
+.basic .link {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.basic .link a {
+    text-decoration: none;
+    color: black;
+    border: solid 1px var(--main-color--);
+    padding: 20px 30px;
+    font-size: 20px;
+}
+/* end basic */
+/* start prem */
+.prem {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--main-color--);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.prem .head  {
+    border-bottom: solid 1px var(--main-color--);
+    padding: 20px 120px;
+}
+.prem .head h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.prem .head span {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+}
+.prem .head span::before {
+    content: "$";
+    position: absolute;
+    left: -36px;
+    top: 0;
+    font-size: 35px;
+}
+.prem .head span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 30px;
+    bottom: 10px;
+    right: -65px;
+}
+.prem .compon  {
+    padding: 0px 50px;
+    border-bottom: solid 1px var(--main-color--);
+}
+.prem .compon span:last-child {
+    border: 0 !important ;
+}
+.prem .compon span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border-bottom: solid 1px var(--main-color--);
+    padding: 13px 7px;
+}
+.prem .link {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.prem .link a {
+    text-decoration: none;
+    color: black;
+    border: solid 1px var(--main-color--);
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+/* end prem */
+
+/* start pro */
+.pro {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--main-color--);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.pro .head  {
+    border-bottom: solid 1px var(--main-color--);
+    padding: 20px 120px;
+}
+.pro .head h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.pro .head span {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+}
+.pro .head span::before {
+    content: "$";
+    position: absolute;
+    left: -36px;
+    top: 0;
+    font-size: 35px;
+}
+.pro .head span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 30px;
+    bottom: 10px;
+    right: -65px;
+}
+.pro .compon  {
+    padding: 0px 50px;
+    border-bottom: solid 1px var(--main-color--);
+}
+.pro .compon span:last-child {
+    border: 0 !important ;
+}
+.pro .compon span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border-bottom: solid 1px var(--main-color--);
+    padding: 13px 7px;
+}
+.pro .link {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.pro .link a {
+    text-decoration: none;
+    color: black;
+    border: solid 1px var(--main-color--);
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+/* end pro */
+
+/* start plat */
+
+.plat {
+    background-color: #fcfcfc;
+    border-top: 1px solid var(--main-color--);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.plat .head  {
+    border-bottom: solid 1px var(--main-color--);
+    padding: 20px 120px;
+}
+.plat .head h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.plat .head span {
+    position: relative;
+    font-size: 80px;
+    font-weight: bold;
+}
+.plat .head span::before {
+    content: "$";
+    position: absolute;
+    left: -36px;
+    top: 0;
+    font-size: 35px;
+}
+.plat .head span::after {
+    content: "/Mo";
+    position: absolute;
+    font-size: 30px;
+    bottom: 10px;
+    right: -65px;
+}
+.plat .compon  {
+    padding: 0px 50px;
+    border-bottom: solid 1px var(--main-color--);
+}
+.plat .compon span:last-child {
+    border: 0 !important ;
+}
+.plat .compon span {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    border-bottom: solid 1px var(--main-color--);
+    padding: 13px 7px;
+}
+.plat .link {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.plat .link a {
+    text-decoration: none;
+    color: black;
+    border: solid 1px var(--main-color--);
+    padding: 20px 30px;
+    font-size: 20px;
+}
+
+/* end plat */
+
+.pricing p.con {
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+.pricing a.us {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 15px 25px;
+    transition: 0.5s cubic-bezier(0.39, 0.58, 0.57, 1);
+    border: solid 1px var(--main-color--);
+}
+
+.pricing a.us:hover {
+    box-shadow: 150px 0px 0px var(--main-color--) inset;
+    color: white;
+}
+
+
+@media (min-width:1144px) {
+    .pricing .container .basic, .prem , .pro , .plat {
+        flex-basis: 20%;
+    }
+ 
+}
+@media  (min-width:768px) and (max-width:1143px){
+    .pricing .container .basic, .prem , .pro , .plat{
+        flex-basis: 50%;
+        margin-left: -9px;
+        margin-right: -10px;
+    }
+    .pricing .container {
+        flex-wrap: wrap;
+    }
+
+}
+@media (max-width:767px) {
+.pricing .container .basic, .prem , .pro , .plat {     
+  flex-basis: 100%;
+}
+}
+
+/* end pricing */
+
+/* start sub */
+
+.sub {
+    padding: var(--padding--) 30px;
+    background-image: url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg");
+    max-width: 100%;
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.sub::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg--);
+}
+.sub .container {
+    position: relative;
+    align-items:center;
+}
+.sub .container form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    align-items: center;
+}
+.sub .container form input[type="email"] {
+    border: 1px solid white;
+    background: none;
+    padding: 20px 20px 20px 60px;
+    caret-color: var(--main-color--);
+    width: calc(100% - 130px);
+    border-right: none;
+    color: white;
+
+}
+.sub .container form input:focus {
+    outline: none;
+}
+.sub .container form input[type="email"]::placeholder {
+    color: white;
+}
+.sub .container form input[type="submit"] {
+    width: 130px;
+    background: var(--main-color--);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    border-left: none;
+    height: 58px;
+    cursor: pointer;
+}
+.sub .container form input {
+    display: inline-block;
+    border-radius: 0;
+}
+.sub .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    font-size: 30px;
+    color: white;
+}
+
+.sub .container p {
+    margin-left: 30px;
+    line-height: 2;
+    text-align: center;
+}
+@media (max-width:991px) {
+    .sub .container {
+        flex-direction: column;
+    }
+    .sub .container p {
+        margin: 35px 0 0;
+    }
+}
+
+/* end sub */
+/* START CONTACT */
+
+.contact {
+    padding:var(--padding--) 30px;
+}
+.contact .container::after{
+    display: none !important;
+}
+.contact .container {
+    align-items: flex-start;
+}
+.contact .container form input {
+    border-radius: 0;
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 20px
+}
+.contact .container form {
+    flex-basis: 70%;
+}
+.contact .container form input[type="text"], input[type="email"] {
+    border: 1px solid #777;
+}
+.contact .container form input[type="text"]::placeholder, input[type="email"]::placeholder {
+    color: #999999;
+    font-weight: normal;
+    font-size: 20px;
+}
+.contact .container form textarea:focus {
+    outline: 0;
+}
+.contact .container form textarea::placeholder {
+    font-size: 20px;
+    color: #999999;
+    font-weight: normal;
+}
+textarea {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.contact .container form input[type="submit"] {
+    color: white;
+    background-color: var(--main-color--);
+    border: 0;
+    width: fit-content;
+    display: flex;
+    margin-left: auto;
+    cursor: pointer;
+}
+.contact .container .info {
+    flex-basis: 25%;
+}
+.contact .container .info h4 {
+    margin-bottom: 30px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.contact .container .info span.phone{
+    color: #777;
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.contact .container .info h4.last{
+    margin-top: 90px;
+}
+.contact .container .info address {
+    color: #777;
+
+}
+
+@media (max-width:767px) {
+    .contact .container {
+        flex-direction: column;
+        align-items: 0;
+    }
+    .contact .container form {
+       width: 100%;
+    }
+    .contact .container .info h4.last{
+        margin-top: 40px;
+    }
+
+    .contact .container .info {
+        width: 100%;
+        order: -1;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+/* END CONTUCT */
+/* start footer */
+footer {
+    background-image:url("https://elzerowebschool.github.io/HTML_And_CSS_Template_Two/images/subscribe.jpg") ;
+    background-size: cover;
+    padding-top: calc(var(--padding--) / 2 );
+    padding-bottom: calc(var(--padding--) / 2 );
+    position: relative;
+    height: 50vh;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-bg--);
+}
+
+footer .container {
+    color: white;
+    flex-direction: column;
+    text-align: center;
+}
+footer .container p:not(.copy) {
+    border-bottom: 1px solid white;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+footer .container .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+footer .container .icons i{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+footer .container p.copy {
+    font-size: 25px;
+    margin-top: 70px;
+    text-transform: uppercase;
+}
+footer .container span {
+    color: var(--main-color--);
+    text-transform: capitalize;
+}
+/* end footer */
+input:focus {
+    outline: 0;
+}
